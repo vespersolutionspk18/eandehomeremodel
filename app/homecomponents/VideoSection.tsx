@@ -60,7 +60,7 @@ const VideoSection = () => {
       {/* Main Video Container */}
       <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden">
         {/* Video Element */}
-        <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
+        <div className="relative w-full h-[350px] sm:h-[400px] md:h-[450px]">
           <video
             ref={videoRef}
             autoPlay
@@ -74,134 +74,97 @@ const VideoSection = () => {
           </video>
 
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
 
           {/* Content Overlay */}
-          <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-10 md:p-16 lg:p-20">
-            <div className="max-w-3xl">
+          <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-8 md:p-10">
+            <div className="max-w-2xl">
               {/* Animated Badge */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-4 sm:mb-6"
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-3 sm:mb-4"
               >
-                <span className="w-2 h-2 rounded-full bg-[#0891b2] animate-pulse" />
-                <span className="text-white/90 text-xs sm:text-sm font-medium tracking-tight">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#0891b2] animate-pulse" />
+                <span className="text-white/90 text-xs font-medium tracking-tight">
                   25+ Years of Excellence
                 </span>
               </motion.div>
 
               {/* Main Headline */}
               <motion.h2
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tighter leading-[0.95]"
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tighter leading-tight"
               >
-                TRANSFORM YOUR HOME
-                <br />
-                <span className="text-[#0891b2]">WITH EXPERT REMODELING</span>
+                Transform Your Home
+                <span className="text-[#0891b2]"> With Expert Remodeling</span>
               </motion.h2>
 
               {/* Subtitle */}
               <motion.p
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 tracking-tighter mt-4 sm:mt-6 max-w-xl leading-relaxed"
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-sm sm:text-base text-white/80 tracking-tight mt-2 sm:mt-3 max-w-md"
               >
-                Transform your existing home into the one you&apos;ve always dreamed of.
-                Ezra & Ester personally manage every project.
+                Ezra & Ester personally manage every project from start to finish.
               </motion.p>
 
               {/* CTAs */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8"
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="flex flex-row gap-3 mt-4 sm:mt-5"
               >
                 <Button
                   variant="blue"
                   customBackgroundColor="#0891b2"
-                  size="lg"
                   href="/contact"
                 >
                   Get FREE 3D Design
                 </Button>
                 <Button
                   variant="white"
-                  size="lg"
                   href="/projects"
                 >
                   View Our Work
                 </Button>
               </motion.div>
-
-              {/* Stats Row */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 1.0 }}
-                className="flex flex-wrap gap-6 sm:gap-10 mt-8 sm:mt-12"
-              >
-                <div>
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tighter">1000+</div>
-                  <div className="text-xs sm:text-sm text-white/60 tracking-tight">Projects Completed</div>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tighter">5.0★</div>
-                  <div className="text-xs sm:text-sm text-white/60 tracking-tight">Client Rating</div>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tighter">3</div>
-                  <div className="text-xs sm:text-sm text-white/60 tracking-tight">Counties Served</div>
-                </div>
-              </motion.div>
             </div>
           </div>
 
           {/* Video Controls */}
-          <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 flex items-center gap-2">
+          <div className="absolute bottom-6 right-6 flex items-center gap-2">
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleMute}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
               aria-label={isMuted ? "Unmute" : "Mute"}
             >
               {isMuted ? (
-                <VolumeX className="w-4 h-4 sm:w-5 sm:h-5" />
+                <VolumeX className="w-4 h-4" />
               ) : (
-                <Volume2 className="w-4 h-4 sm:w-5 sm:h-5" />
+                <Volume2 className="w-4 h-4" />
               )}
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={togglePlay}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
               aria-label={isPlaying ? "Pause" : "Play"}
             >
               {isPlaying ? (
-                <Pause className="w-4 h-4 sm:w-5 sm:h-5" />
+                <Pause className="w-4 h-4" />
               ) : (
-                <Play className="w-4 h-4 sm:w-5 sm:h-5 ml-0.5" />
+                <Play className="w-4 h-4 ml-0.5" />
               )}
             </motion.button>
-          </div>
-
-          {/* Decorative Corner Element */}
-          <div className="absolute top-4 sm:top-6 right-4 sm:right-6 hidden md:block">
-            <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center text-white text-xs font-bold border-2 border-white/20">E</div>
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center text-white text-xs font-bold border-2 border-white/20">E</div>
-              </div>
-              <span className="text-white/90 text-sm font-medium tracking-tight">Family Owned Since 1999</span>
-            </div>
           </div>
         </div>
       </div>

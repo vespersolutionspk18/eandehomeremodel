@@ -300,7 +300,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({
           </div>
           <div className="h-px sm:h-8 w-full sm:w-px bg-black/10" />
           <p className="text-sm sm:text-base text-black/60 text-center sm:text-left">
-            Based on <span className="font-semibold text-black/80">{testimonials.length}+ verified reviews</span> from Yelp, Google & Houzz
+            Based on <span className="font-semibold text-black/80">verified reviews</span> from Yelp, Google & Houzz
           </p>
         </div>
       </div>

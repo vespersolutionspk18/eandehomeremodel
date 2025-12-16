@@ -81,12 +81,12 @@ const OurServices = () => {
               <Link
                 key={index}
                 href={service.href}
-                className="flex flex-col items-start p-3 bg-white border-[1.5px] border-stone-200 rounded-2xl hover:border-stone-300 hover:shadow-xl transition-all duration-300 group"
+                className="flex flex-col items-start p-5 bg-stone-200/65 rounded-3xl transition-all duration-300 group"
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 {/* Inset Image with rounded corners */}
-                <div className="relative w-full h-44 lg:h-48 xl:h-52 2xl:h-60 rounded overflow-hidden mb-3">
+                <div className="relative w-full h-44 lg:h-48 xl:h-52 2xl:h-60 rounded-xl overflow-hidden mb-3">
                   <Image
                     src={service.image}
                     alt={service.title}

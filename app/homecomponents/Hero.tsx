@@ -115,9 +115,7 @@ const Hero = ({
     <div className="p-3 sm:p-5">
       <div
         className="flex flex-col lg:flex-row rounded-xl sm:rounded-2xl justify-between relative overflow-hidden min-h-[500px] sm:min-h-[600px]"
-        style={{
-          height: showForm ? 'auto' : height,
-        }}
+        style={showForm ? undefined : { height }}
       >
         {/* Ken Burns Animation Styles */}
         <style jsx>{`
@@ -177,7 +175,7 @@ const Hero = ({
         />
 
         {/* Left Content Section */}
-        <div className={`${showForm ? 'w-full lg:w-1/2' : 'w-full'} h-full p-4 sm:p-5 md:p-6 lg:p-5 flex flex-col justify-center relative z-[2]`}>
+        <div className={`${showForm ? 'w-full lg:w-1/2' : 'w-full'} p-4 sm:p-5 md:p-6 lg:p-5 flex flex-col relative z-[2]`}>
           <div className={`p-2 sm:p-4 md:p-5 flex flex-col gap-4 sm:gap-5 md:gap-7 ${showForm ? 'items-start text-left' : 'items-center text-center'}`}>
             {/* FREE 3D Design Banner or Pre-header */}
             {showARVRBanner && (
@@ -226,10 +224,12 @@ const Hero = ({
               <Button variant="primary" customBackgroundColor={buttonColors?.learnMore || '#0891b2'} className="w-full sm:w-auto" href="/services">Our Services</Button>
               <Button variant="green" customBackgroundColor={buttonColors?.contactUs} className="w-full sm:w-auto" href="/projects">View Our Work</Button>
             </div>
+          </div>
 
-            {/* Rating Section */}
-            {showCapterra && (
-              <div className="flex items-center gap-2 sm:gap-3 mt-2 px-3 sm:px-4 py-1.5 sm:py-2 backdrop-blur-sm bg-black/30 border-[1.5px] border-white/30 rounded-full w-fit">
+          {/* Rating Section - Aligned to bottom */}
+          {showCapterra && (
+            <div className={`mt-auto p-2 sm:p-4 md:p-5 ${showForm ? 'items-start' : 'items-center'}`}>
+              <div className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 backdrop-blur-sm bg-black/30 border-[1.5px] border-white/30 rounded-full w-fit">
                 <div className="flex items-center justify-center h-5 sm:h-6 flex-shrink-0">
                   <Image
                     src="/yelp-5-star.png"
@@ -248,13 +248,13 @@ const Hero = ({
                   ))}
                 </div>
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
 
         {/* Right Contact Form Section */}
         {showForm && (
-          <div className="w-full lg:w-1/2 h-full p-4 sm:p-5 md:p-6 lg:p-5 flex items-center justify-center relative z-[2]">
+          <div className="w-full lg:w-1/2 p-4 sm:p-5 md:p-6 lg:p-5 flex items-center justify-end relative z-[2]">
             <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 w-full max-w-md shadow-2xl">
               <h2 className="text-2xl sm:text-3xl font-normal text-gray-900 mb-2 sm:mb-3 tracking-tight">
                 Get Your FREE 3D Design
