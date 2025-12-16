@@ -76,7 +76,7 @@ const CredentialsPage = () => {
         {/* Hero Section */}
         <section className="p-4 sm:p-5 lg:p-10">
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 justify-between mb-8 lg:mb-12">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black/95 tracking-tighter lg:w-[45%]">
+            <h1 className="text-[2rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl text-black/95 tracking-tighter lg:w-[45%]">
               Credentials You Can Trust
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl tracking-tighter leading-relaxed text-black/80 lg:w-[50%]">
@@ -102,7 +102,7 @@ const CredentialsPage = () => {
                 href="https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/CheckLicense.aspx"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0891b2] rounded-full font-medium hover:bg-white/90 transition-colors"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 bg-white text-[#0891b2] rounded-full font-medium text-sm sm:text-base hover:bg-white/90 active:bg-white/80 active:scale-[0.98] transition-all min-h-[44px]"
               >
                 Verify License
                 <ArrowRight className="w-5 h-5" />
@@ -120,7 +120,7 @@ const CredentialsPage = () => {
             {credentials.map((cred, index) => (
               <div
                 key={index}
-                className="p-6 sm:p-8 border border-stone-200 rounded-2xl hover:border-[#0891b2] hover:shadow-lg transition-all duration-300"
+                className="p-5 sm:p-8 border border-stone-200 rounded-2xl hover:border-[#0891b2] hover:shadow-lg active:scale-[0.98] transition-all duration-300"
               >
                 <div className="flex flex-col gap-4">
                   <div className="w-14 h-14 rounded-xl bg-[#0891b2]/10 flex items-center justify-center">
@@ -258,7 +258,7 @@ const CredentialsPage = () => {
             </div>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#0891b2] text-white rounded-full font-medium text-lg hover:bg-[#0891b2]/90 transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#0891b2] text-white rounded-full font-medium text-base sm:text-lg hover:bg-[#0891b2]/90 active:bg-[#0891b2]/80 active:scale-[0.98] transition-all whitespace-nowrap min-h-[48px]"
             >
               Get Free Consultation
               <ArrowRight className="w-5 h-5" />

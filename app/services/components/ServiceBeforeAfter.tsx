@@ -141,26 +141,26 @@ const ServiceBeforeAfter: React.FC<ServiceBeforeAfterProps> = ({
   accentColor = '#0891b2'
 }) => {
   return (
-    <div className="py-16 md:py-24 px-6 md:px-10 lg:px-16 bg-stone-50">
+    <div className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-10 lg:px-16 bg-stone-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
           <p
-            className="text-sm md:text-base font-semibold uppercase tracking-wider mb-3"
+            className="text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wider mb-2 sm:mb-3"
             style={{ color: accentColor }}
           >
             {subtitle}
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
+          <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
             {title}
           </h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Drag the slider to reveal the stunning transformations we&apos;ve created for our clients.
           </p>
         </div>
 
         {/* Before/After Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {pairs.map((pair, index) => (
             <BeforeAfterSlider
               key={index}
@@ -173,10 +173,10 @@ const ServiceBeforeAfter: React.FC<ServiceBeforeAfterProps> = ({
         </div>
 
         {/* View More Link */}
-        <div className="mt-12 text-center">
+        <div className="mt-10 sm:mt-12 text-center">
           <a
             href="/before-after"
-            className="inline-flex items-center gap-2 text-lg font-semibold transition-colors hover:gap-3"
+            className="inline-flex items-center gap-2 text-base sm:text-lg font-semibold transition-colors hover:gap-3 min-h-[44px] py-2"
             style={{ color: accentColor }}
           >
             View All Before &amp; After Photos

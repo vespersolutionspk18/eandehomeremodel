@@ -79,7 +79,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
               {/* Hamburger Menu Button - Mobile Only */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2 text-black hover:bg-white/50 rounded-lg transition-colors"
+                className="lg:hidden p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-black hover:bg-white/50 active:bg-white/70 rounded-lg transition-colors"
                 aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? (
@@ -104,9 +104,10 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white z-[9999] transform transition-transform duration-300 ease-in-out lg:hidden ${
+        className={`fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white z-[9999] transform transition-transform duration-300 ease-in-out lg:hidden safe-area-inset ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
+        style={{ paddingTop: 'env(safe-area-inset-top)', paddingBottom: 'env(safe-area-inset-bottom)' }}
       >
         <div className="flex flex-col h-full">
           {/* Mobile Menu Header */}
@@ -114,7 +115,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
             <span className="text-xl font-semibold text-black">Menu</span>
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center hover:bg-gray-100 active:bg-gray-200 rounded-lg transition-colors"
               aria-label="Close menu"
             >
               <X className="w-6 h-6" />
@@ -122,28 +123,28 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
           </div>
 
           {/* Mobile Menu Content */}
-          <div className="flex-1 overflow-y-auto p-4">
-            <nav className="flex flex-col gap-2">
+          <div className="flex-1 overflow-y-auto p-4 overscroll-contain">
+            <nav className="flex flex-col gap-1">
               {/* Home Link */}
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-3 text-lg text-black hover:bg-gray-100 rounded-lg transition-colors"
+                className="px-4 py-3.5 min-h-[48px] flex items-center text-lg text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                 style={{ fontFamily: 'var(--font-figtree)', fontWeight: 500 }}
               >
                 Home
               </Link>
 
               {/* Services Section */}
-              <div className="mt-2">
-                <div className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wide">
+              <div className="mt-3">
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">
                   Services
                 </div>
-                <div className="flex flex-col gap-1 mt-1">
+                <div className="flex flex-col gap-0.5 mt-1">
                   <Link
                     href="/services/kitchen-remodeling"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
                     Kitchen Remodeling
@@ -151,7 +152,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                   <Link
                     href="/services/bathroom-remodeling"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
                     Bathroom Remodeling
@@ -159,7 +160,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                   <Link
                     href="/services/adu-garage-conversion"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
                     ADU & Garage Conversion
@@ -167,7 +168,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                   <Link
                     href="/services/outdoor-living"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
                     Outdoor Living
@@ -175,7 +176,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                   <Link
                     href="/services/whole-house-remodeling"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
                     Whole House Remodeling
@@ -183,7 +184,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                   <Link
                     href="/services/room-additions"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
                     Room Additions
@@ -191,10 +192,10 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                   <Link
                     href="/contact"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base hover:bg-gray-100 rounded-lg transition-colors flex items-center gap-2"
+                    className="px-4 py-3 min-h-[44px] hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors flex items-center gap-2"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
-                    <span className="text-black">FREE 3D Design</span>
+                    <span className="text-black text-[0.95rem]">FREE 3D Design</span>
                     <span className="px-2 py-0.5 text-xs font-medium text-white rounded-full" style={{ backgroundColor: hoverColor }}>
                       Free
                     </span>
@@ -204,14 +205,14 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
 
               {/* Locations Section */}
               <div className="mt-4">
-                <div className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">
                   Service Areas
                 </div>
-                <div className="flex flex-col gap-1 mt-1">
+                <div className="flex flex-col gap-0.5 mt-1">
                   <Link
                     href="/locations/ventura-county"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
                     Ventura County
@@ -219,7 +220,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                   <Link
                     href="/locations/santa-barbara-county"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
                     Santa Barbara County
@@ -227,7 +228,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                   <Link
                     href="/locations/los-angeles-county"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
                     Los Angeles County
@@ -235,7 +236,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                   <Link
                     href="/locations"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400, color: hoverColor }}
                   >
                     View All Locations →
@@ -245,14 +246,14 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
 
               {/* About Section */}
               <div className="mt-4">
-                <div className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">
                   About E&E
                 </div>
-                <div className="flex flex-col gap-1 mt-1">
+                <div className="flex flex-col gap-0.5 mt-1">
                   <Link
                     href="/about/our-story"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
                     Our Story
@@ -260,7 +261,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                   <Link
                     href="/about/meet-ezra-and-ester"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
                     Meet Ezra & Ester
@@ -268,7 +269,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                   <Link
                     href="/about/our-process"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="px-4 py-2.5 text-base text-black hover:bg-gray-100 rounded-lg transition-colors"
+                    className="px-4 py-3 min-h-[44px] flex items-center text-[0.95rem] text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                     style={{ fontFamily: 'var(--font-figtree)', fontWeight: 400 }}
                   >
                     Our Process
@@ -281,7 +282,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                 <Link
                   href="/projects"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-3 text-lg text-black hover:bg-gray-100 rounded-lg transition-colors block"
+                  className="px-4 py-3.5 min-h-[48px] flex items-center text-lg text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                   style={{ fontFamily: 'var(--font-figtree)', fontWeight: 500 }}
                 >
                   Our Work
@@ -289,7 +290,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
                 <Link
                   href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-3 text-lg text-black hover:bg-gray-100 rounded-lg transition-colors block"
+                  className="px-4 py-3.5 min-h-[48px] flex items-center text-lg text-black hover:bg-gray-100 active:bg-gray-200 rounded-xl transition-colors"
                   style={{ fontFamily: 'var(--font-figtree)', fontWeight: 500 }}
                 >
                   Contact Us
@@ -303,7 +304,7 @@ const Header = ({ enableScrollEffects = false, buttonText = 'Get Free Quote', bu
             <Button
               variant="blue"
               customBackgroundColor={buttonColor || '#0891b2'}
-              className="w-full"
+              className="w-full min-h-[52px]"
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
             >

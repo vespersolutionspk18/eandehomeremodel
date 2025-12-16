@@ -24,21 +24,21 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({
   accentColor = '#0891b2'
 }) => {
   return (
-    <div className="py-16 md:py-24 px-6 md:px-10 lg:px-16 bg-stone-50">
+    <div className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-10 lg:px-16 bg-stone-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 md:mb-14">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-8 sm:mb-10 md:mb-14">
           <div>
-            <p className="text-sm md:text-base font-semibold uppercase tracking-wider mb-3" style={{ color: accentColor }}>
+            <p className="text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wider mb-2 sm:mb-3" style={{ color: accentColor }}>
               {subtitle}
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
+            <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
               {title}
             </h2>
           </div>
           <Link
             href="/projects"
-            className="mt-4 md:mt-0 text-base font-medium hover:underline transition-colors"
+            className="mt-4 sm:mt-0 text-sm sm:text-base font-medium hover:underline transition-colors min-h-[44px] flex items-center"
             style={{ color: accentColor }}
           >
             View All Projects →
@@ -46,7 +46,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
           {images.map((image, index) => (
             <div
               key={index}

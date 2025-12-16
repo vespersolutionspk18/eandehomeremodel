@@ -245,35 +245,35 @@ const ReviewsPage = () => {
       <Header enableScrollEffects={false} />
       <main className="pt-[5rem] sm:pt-[5.5rem] md:pt-[6rem]">
         {/* Hero Section */}
-        <section className="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden">
+        <section className="relative py-12 sm:py-16 md:py-24 px-4 md:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-white to-stone-50" />
 
           <div className="relative max-w-6xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-100 rounded-full text-cyan-700 text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-cyan-100 rounded-full text-cyan-700 text-xs sm:text-sm font-medium mb-5 sm:mb-6">
               <Award className="w-4 h-4" />
               <span>500+ Happy Homeowners</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-black/90 mb-6">
+            <h1 className="text-[2rem] leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-black/90 mb-5 sm:mb-6">
               Don&apos;t Take Our Word For It
             </h1>
 
-            <p className="text-lg md:text-xl text-black/60 max-w-2xl mx-auto mb-10">
+            <p className="text-base sm:text-lg md:text-xl text-black/60 max-w-2xl mx-auto mb-8 sm:mb-10">
               See what our clients say about working with E&E Home Remodeling.
               Real stories from real homeowners across Southern California.
             </p>
 
             {/* Aggregate Rating */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10">
               <div className="flex items-center gap-3">
-                <span className="text-5xl md:text-6xl font-bold text-black tracking-tighter">5.0</span>
+                <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-black tracking-tighter">5.0</span>
                 <div className="flex flex-col items-start">
                   <div className="flex gap-1">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={star} className="w-5 h-5 text-yellow-400" fill="currentColor" />
+                      <Star key={star} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" fill="currentColor" />
                     ))}
                   </div>
-                  <span className="text-sm text-black/60">Average Rating</span>
+                  <span className="text-xs sm:text-sm text-black/60">Average Rating</span>
                 </div>
               </div>
 
@@ -303,19 +303,19 @@ const ReviewsPage = () => {
         </section>
 
         {/* Video Testimonials Section */}
-        <section className="py-16 md:py-24 px-4 md:px-8 bg-stone-50">
+        <section className="py-12 sm:py-16 md:py-24 px-4 md:px-8 bg-stone-50">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h5 className="text-sm text-black/60 tracking-tight mb-2">Video Testimonials</h5>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-black/90 mb-4">
+            <div className="text-center mb-10 sm:mb-12">
+              <h5 className="text-xs sm:text-sm text-black/60 tracking-tight mb-2">Video Testimonials</h5>
+              <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl font-bold tracking-tighter text-black/90 mb-3 sm:mb-4">
                 Hear From Our Clients
               </h2>
-              <p className="text-black/60 max-w-xl mx-auto">
+              <p className="text-sm sm:text-base text-black/60 max-w-xl mx-auto">
                 Watch real homeowners share their experience working with E&E Home Remodeling.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {videoTestimonials.map((video) => (
                 <VideoCard key={video.id} video={video} onPlay={setActiveVideo} />
               ))}
@@ -332,22 +332,22 @@ const ReviewsPage = () => {
         />
 
         {/* Review Platforms Section */}
-        <section className="py-16 md:py-24 px-4 md:px-8">
+        <section className="py-12 sm:py-16 md:py-24 px-4 md:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h5 className="text-sm text-black/60 tracking-tight mb-2">Verified Reviews</h5>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-black/90 mb-4">
+            <div className="text-center mb-10 sm:mb-12">
+              <h5 className="text-xs sm:text-sm text-black/60 tracking-tight mb-2">Verified Reviews</h5>
+              <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl font-bold tracking-tighter text-black/90 mb-3 sm:mb-4">
                 Find Us On These Platforms
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {/* Yelp Card */}
               <a
                 href="https://www.yelp.com/biz/e-and-e-remodeling-los-angeles"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white rounded-2xl p-6 border border-black/5 hover:shadow-lg transition-all duration-300 group"
+                className="bg-white rounded-2xl p-5 sm:p-6 border border-black/5 hover:shadow-lg active:scale-[0.98] transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between mb-4">
                   <Image src="/yelp-5-star.png" alt="Yelp" width={80} height={32} className="h-8 w-auto" unoptimized />
@@ -367,7 +367,7 @@ const ReviewsPage = () => {
                 href="https://www.google.com/search?q=E%26E+Home+Remodeling+reviews"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white rounded-2xl p-6 border border-black/5 hover:shadow-lg transition-all duration-300 group"
+                className="bg-white rounded-2xl p-5 sm:p-6 border border-black/5 hover:shadow-lg active:scale-[0.98] transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
@@ -390,7 +390,7 @@ const ReviewsPage = () => {
                 href="https://www.houzz.com/professionals/general-contractors/e-and-e-construction"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white rounded-2xl p-6 border border-black/5 hover:shadow-lg transition-all duration-300 group"
+                className="bg-white rounded-2xl p-5 sm:p-6 border border-black/5 hover:shadow-lg active:scale-[0.98] transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between mb-4">
                   <Image src="/houzz-logo.webp" alt="Houzz" width={80} height={32} className="h-7 w-auto" unoptimized />
@@ -409,19 +409,19 @@ const ReviewsPage = () => {
         </section>
 
         {/* See The Work Section */}
-        <section className="py-16 md:py-24 px-4 md:px-8 bg-stone-50">
+        <section className="py-12 sm:py-16 md:py-24 px-4 md:px-8 bg-stone-50">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h5 className="text-sm text-black/60 tracking-tight mb-2">Our Work</h5>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-black/90 mb-4">
+            <div className="text-center mb-10 sm:mb-12">
+              <h5 className="text-xs sm:text-sm text-black/60 tracking-tight mb-2">Our Work</h5>
+              <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl font-bold tracking-tighter text-black/90 mb-3 sm:mb-4">
                 See The Work Behind These Reviews
               </h2>
-              <p className="text-black/60 max-w-xl mx-auto">
+              <p className="text-sm sm:text-base text-black/60 max-w-xl mx-auto">
                 Explore the projects that earned us these glowing reviews.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
               {featuredProjects.map((project, index) => (
                 <Link
                   key={index}
@@ -446,10 +446,10 @@ const ReviewsPage = () => {
               ))}
             </div>
 
-            <div className="text-center mt-10">
+            <div className="text-center mt-8 sm:mt-10">
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full font-medium hover:bg-black/80 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full font-medium hover:bg-black/80 active:bg-black/70 active:scale-[0.98] transition-all min-h-[48px]"
               >
                 View All Projects
                 <ArrowRight className="w-5 h-5" />
@@ -484,25 +484,25 @@ const ReviewsPage = () => {
 
         {/* CTA Section */}
         <section className="p-3 sm:p-5">
-          <div className="bg-cyan-600 rounded-2xl sm:rounded-3xl py-16 md:py-20 px-6 md:px-10">
+          <div className="bg-cyan-600 rounded-2xl sm:rounded-3xl py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-white mb-6">
+              <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-white mb-5 sm:mb-6">
                 Join Our Happy Homeowners
               </h2>
-              <p className="text-lg text-white/90 mb-10 max-w-xl mx-auto">
+              <p className="text-base sm:text-lg text-white/90 mb-8 sm:mb-10 max-w-xl mx-auto">
                 Ready to start your own transformation story? Get your FREE consultation and 3D design today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-cyan-700 rounded-full font-semibold hover:bg-white/90 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-cyan-700 rounded-full font-semibold text-base sm:text-lg hover:bg-white/90 active:bg-white/80 active:scale-[0.98] transition-all min-h-[48px]"
                 >
                   Get Free Consultation
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <a
                   href="tel:+18776389429"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border-2 border-white rounded-full font-semibold hover:bg-white/10 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-transparent text-white border-2 border-white rounded-full font-semibold text-base sm:text-lg hover:bg-white/10 active:bg-white/20 active:scale-[0.98] transition-all min-h-[48px]"
                 >
                   Call (877) 638-9429
                 </a>

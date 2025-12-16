@@ -51,7 +51,7 @@ const OurStoryPage = () => {
         {/* Hero Section */}
         <section className="p-4 sm:p-5 lg:p-10">
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 justify-between mb-8 lg:mb-12">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black/95 tracking-tighter lg:w-[45%]">
+            <h1 className="text-[2rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl text-black/95 tracking-tighter lg:w-[45%]">
               Our Story
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl tracking-tighter leading-relaxed text-black/80 lg:w-[50%]">
@@ -141,9 +141,9 @@ const OurStoryPage = () => {
             </h2>
             <div className="max-w-4xl mx-auto">
               {milestones.map((milestone, index) => (
-                <div key={index} className="flex gap-6 sm:gap-8 mb-8 last:mb-0">
+                <div key={index} className="flex gap-4 sm:gap-8 mb-8 last:mb-0">
                   <div className="flex flex-col items-center">
-                    <div className="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-[#0891b2] flex items-center justify-center text-white font-medium text-sm sm:text-base">
+                    <div className="w-14 sm:w-20 h-14 sm:h-20 rounded-full bg-[#0891b2] flex items-center justify-center text-white font-medium text-xs sm:text-base flex-shrink-0">
                       {milestone.year}
                     </div>
                     {index < milestones.length - 1 && (
@@ -177,7 +177,7 @@ const OurStoryPage = () => {
             </div>
             <Link
               href="/about/meet-ezra-and-ester"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#0891b2] text-white rounded-full font-medium text-lg hover:bg-[#0891b2]/90 transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#0891b2] text-white rounded-full font-medium text-base sm:text-lg hover:bg-[#0891b2]/90 active:bg-[#0891b2]/80 active:scale-[0.98] transition-all whitespace-nowrap min-h-[48px]"
             >
               Meet Ezra & Ester
               <ArrowRight className="w-5 h-5" />

@@ -112,9 +112,9 @@ const Hero = ({
   };
 
   return (
-    <div className="p-3 sm:p-5">
+    <div className="p-4 sm:p-5 pb-[env(safe-area-inset-bottom)]">
       <div
-        className="flex flex-col lg:flex-row rounded-xl sm:rounded-2xl justify-between relative overflow-hidden min-h-[500px] sm:min-h-[600px]"
+        className="flex flex-col lg:flex-row rounded-2xl sm:rounded-2xl justify-between relative overflow-hidden min-h-[580px] sm:min-h-[600px]"
         style={showForm ? undefined : { height }}
       >
         {/* Ken Burns Animation Styles */}
@@ -175,8 +175,8 @@ const Hero = ({
         />
 
         {/* Left Content Section */}
-        <div className={`${showForm ? 'w-full lg:w-1/2' : 'w-full'} p-4 sm:p-5 md:p-6 lg:p-5 flex flex-col relative z-[2]`}>
-          <div className={`p-2 sm:p-4 md:p-5 flex flex-col gap-4 sm:gap-5 md:gap-7 ${showForm ? 'items-start text-left' : 'items-center text-center'}`}>
+        <div className={`${showForm ? 'w-full lg:w-1/2' : 'w-full'} p-5 sm:p-5 md:p-6 lg:p-5 flex flex-col relative z-[2]`}>
+          <div className={`p-1 sm:p-4 md:p-5 flex flex-col gap-5 sm:gap-5 md:gap-7 ${showForm ? 'items-start text-left' : 'items-center text-center'}`}>
             {/* FREE 3D Design Banner or Pre-header */}
             {showARVRBanner && (
               <Link href="/contact">
@@ -209,7 +209,7 @@ const Hero = ({
               </div>
             )}
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tighter" style={{ color: headlineColor }}>
+            <h1 className="text-[2rem] leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tighter" style={{ color: headlineColor }}>
               {headline.split(', ').map((part, i) => (
                 <React.Fragment key={i}>
                   {part}
@@ -217,12 +217,12 @@ const Hero = ({
                 </React.Fragment>
               ))}
             </h1>
-            <h5 className="text-base sm:text-lg md:text-xl lg:text-2xl tracking-tighter leading-relaxed" style={{ color: subtitleColor }}>
+            <h5 className="text-[0.95rem] leading-relaxed sm:text-lg md:text-xl lg:text-2xl tracking-tighter" style={{ color: subtitleColor }}>
               {subtitle}
             </h5>
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
-              <Button variant="primary" customBackgroundColor={buttonColors?.learnMore || '#0891b2'} className="w-full sm:w-auto" href="/services">Our Services</Button>
-              <Button variant="green" customBackgroundColor={buttonColors?.contactUs} className="w-full sm:w-auto" href="/projects">View Our Work</Button>
+            <div className="flex flex-col gap-3 sm:flex-row sm:gap-3 w-full sm:w-auto">
+              <Button variant="primary" customBackgroundColor={buttonColors?.learnMore || '#0891b2'} className="w-full min-h-[48px] sm:w-auto" href="/services">Our Services</Button>
+              <Button variant="green" customBackgroundColor={buttonColors?.contactUs} className="w-full min-h-[48px] sm:w-auto" href="/projects">View Our Work</Button>
             </div>
           </div>
 
@@ -255,23 +255,23 @@ const Hero = ({
         {/* Right Contact Form Section */}
         {showForm && (
           <div className="w-full lg:w-1/2 p-4 sm:p-5 md:p-6 lg:p-5 flex items-center justify-end relative z-[2]">
-            <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 w-full max-w-md shadow-2xl">
-              <h2 className="text-2xl sm:text-3xl font-normal text-gray-900 mb-2 sm:mb-3 tracking-tight">
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 w-full max-w-md shadow-2xl">
+              <h2 className="text-[1.35rem] leading-tight sm:text-3xl font-normal text-gray-900 mb-2 sm:mb-3 tracking-tight">
                 Get Your FREE 3D Design
               </h2>
-              <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed">
+              <p className="text-gray-600 mb-5 sm:mb-8 text-[0.875rem] sm:text-base leading-relaxed">
                 See your dream remodel come to life before we start. Schedule a free consultation and receive a complimentary 3D design of your project.
               </p>
 
-              <form onSubmit={handleSubmit} className="flex flex-col gap-2 sm:gap-3">
-                <div className="grid grid-cols-2 gap-2 sm:gap-3">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:gap-3">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-3">
                   <input
                     type="text"
                     name="name"
                     placeholder="Name*"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0891b2] focus:border-transparent text-gray-900 placeholder-gray-400 text-sm sm:text-base"
+                    className="w-full px-4 sm:px-4 py-3 sm:py-2.5 rounded-xl sm:rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0891b2] focus:border-transparent text-gray-900 placeholder-gray-400 text-base sm:text-base min-h-[48px]"
                     required
                   />
                   <input
@@ -280,19 +280,19 @@ const Hero = ({
                     placeholder="Email*"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0891b2] focus:border-transparent text-gray-900 placeholder-gray-400 text-sm sm:text-base"
+                    className="w-full px-4 sm:px-4 py-3 sm:py-2.5 rounded-xl sm:rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0891b2] focus:border-transparent text-gray-900 placeholder-gray-400 text-base sm:text-base min-h-[48px]"
                     required
                   />
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                <div className="grid grid-cols-2 gap-3 sm:gap-3">
                   <input
                     type="tel"
                     name="phone"
                     placeholder="Phone*"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0891b2] focus:border-transparent text-gray-900 placeholder-gray-400 text-sm sm:text-base"
+                    className="w-full px-4 sm:px-4 py-3 sm:py-2.5 rounded-xl sm:rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0891b2] focus:border-transparent text-gray-900 placeholder-gray-400 text-base sm:text-base min-h-[48px]"
                     required
                   />
                   <input
@@ -301,7 +301,7 @@ const Hero = ({
                     placeholder="Zipcode*"
                     value={formData.zipcode}
                     onChange={handleInputChange}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0891b2] focus:border-transparent text-gray-900 placeholder-gray-400 text-sm sm:text-base"
+                    className="w-full px-4 sm:px-4 py-3 sm:py-2.5 rounded-xl sm:rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0891b2] focus:border-transparent text-gray-900 placeholder-gray-400 text-base sm:text-base min-h-[48px]"
                     required
                   />
                 </div>
@@ -310,13 +310,13 @@ const Hero = ({
                   <button
                     type="button"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
-                    className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0891b2] focus:border-transparent text-sm sm:text-base bg-white flex items-center justify-between transition-all ${formData.hearAbout ? 'text-gray-900' : 'text-gray-400'}`}
+                    className={`w-full px-4 sm:px-4 py-3 sm:py-2.5 rounded-xl sm:rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0891b2] focus:border-transparent text-base sm:text-base bg-white flex items-center justify-between transition-all min-h-[48px] ${formData.hearAbout ? 'text-gray-900' : 'text-gray-400'}`}
                   >
-                    <span>{formData.hearAbout ? hearAboutOptions.find(o => o.value === formData.hearAbout)?.label : 'How did you hear about us?'}</span>
-                    <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
+                    <span className="truncate pr-2">{formData.hearAbout ? hearAboutOptions.find(o => o.value === formData.hearAbout)?.label : 'How did you hear about us?'}</span>
+                    <ChevronDown className={`w-5 h-5 flex-shrink-0 text-gray-400 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
                   </button>
                   {dropdownOpen && (
-                    <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden">
+                    <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden max-h-[240px] overflow-y-auto">
                       {hearAboutOptions.map((option) => (
                         <button
                           key={option.value}
@@ -325,7 +325,7 @@ const Hero = ({
                             setFormData(prev => ({ ...prev, hearAbout: option.value }));
                             setDropdownOpen(false);
                           }}
-                          className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 text-left text-sm sm:text-base transition-colors hover:bg-gray-50 ${formData.hearAbout === option.value ? 'bg-[#0891b2]/10 text-[#0891b2]' : 'text-gray-700'}`}
+                          className={`w-full px-4 sm:px-4 py-3 sm:py-2.5 text-left text-base sm:text-base transition-colors hover:bg-gray-50 active:bg-gray-100 min-h-[48px] ${formData.hearAbout === option.value ? 'bg-[#0891b2]/10 text-[#0891b2]' : 'text-gray-700'}`}
                         >
                           {option.label}
                         </button>
@@ -334,17 +334,17 @@ const Hero = ({
                   )}
                 </div>
 
-                <div className="space-y-1">
+                <div className="space-y-2">
                   <p className="text-sm text-gray-700 font-medium">Project Type* (Select All That Apply)</p>
-                  <div className="flex flex-wrap gap-x-4 gap-y-1">
+                  <div className="flex flex-wrap gap-x-3 gap-y-2 sm:gap-x-4 sm:gap-y-1">
                     {['Kitchen Remodel', 'Bathroom Remodel', 'Room Addition', 'Garage ADU', 'Other'].map((type) => (
-                      <label key={type} className="flex items-center gap-1.5 text-sm text-gray-700 cursor-pointer">
+                      <label key={type} className="flex items-center gap-2 text-[0.875rem] sm:text-sm text-gray-700 cursor-pointer py-1 active:opacity-70">
                         <input
                           type="checkbox"
                           value={type}
                           checked={formData.projectTypes.includes(type)}
                           onChange={handleCheckboxChange}
-                          className="w-4 h-4 rounded border-gray-300 text-[#0891b2] focus:ring-[#0891b2]"
+                          className="w-5 h-5 sm:w-4 sm:h-4 rounded border-gray-300 text-[#0891b2] focus:ring-[#0891b2]"
                         />
                         {type}
                       </label>
@@ -358,11 +358,11 @@ const Hero = ({
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={2}
-                  className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0891b2] focus:border-transparent text-gray-900 placeholder-gray-400 resize-none text-sm sm:text-base"
+                  className="w-full px-4 sm:px-4 py-3 sm:py-2.5 rounded-xl sm:rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0891b2] focus:border-transparent text-gray-900 placeholder-gray-400 resize-none text-base sm:text-base"
                 />
 
-                <div className="mt-1 sm:mt-2">
-                  <Button type="submit" variant="blue" customBackgroundColor="#0891b2" className="w-full">
+                <div className="mt-2 sm:mt-2">
+                  <Button type="submit" variant="blue" customBackgroundColor="#0891b2" className="w-full min-h-[52px]">
                     Send Message
                   </Button>
                 </div>

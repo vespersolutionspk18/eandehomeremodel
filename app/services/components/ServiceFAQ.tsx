@@ -24,30 +24,30 @@ const ServiceFAQ: React.FC<ServiceFAQProps> = ({
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <div className="py-16 md:py-24 px-6 md:px-10 lg:px-16 bg-white">
+    <div className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-10 lg:px-16 bg-white">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <p className="text-sm md:text-base font-semibold uppercase tracking-wider mb-3" style={{ color: accentColor }}>
+        <div className="text-center mb-10 sm:mb-12">
+          <p className="text-xs sm:text-sm md:text-base font-semibold uppercase tracking-wider mb-2 sm:mb-3" style={{ color: accentColor }}>
             {subtitle}
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
+          <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight">
             {title}
           </h2>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
               className="border border-stone-200 rounded-xl overflow-hidden"
             >
               <button
-                className="w-full px-6 py-5 flex items-center justify-between text-left bg-white hover:bg-stone-50 transition-colors"
+                className="w-full px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between text-left bg-white hover:bg-stone-50 active:bg-stone-100 transition-colors min-h-[56px]"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="text-lg font-semibold text-gray-900 pr-4">
+                <span className="text-base sm:text-lg font-semibold text-gray-900 pr-3 sm:pr-4">
                   {faq.question}
                 </span>
                 <ChevronDown
@@ -61,7 +61,7 @@ const ServiceFAQ: React.FC<ServiceFAQProps> = ({
                   openIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
               >
-                <div className="px-6 pb-5 text-gray-600 leading-relaxed">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-5 text-sm sm:text-base text-gray-600 leading-relaxed">
                   {faq.answer}
                 </div>
               </div>

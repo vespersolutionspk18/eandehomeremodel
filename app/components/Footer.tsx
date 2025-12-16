@@ -196,14 +196,14 @@ const Footer = ({ backgroundColor = '#0891b2' }: FooterProps) => {
   return (
     <>
       {/* Reviews Section */}
-      <div className="p-3 sm:p-5">
-        <div className="flex flex-col gap-8 sm:gap-10 md:gap-12">
+      <div className="p-4 sm:p-5">
+        <div className="flex flex-col gap-6 sm:gap-10 md:gap-12">
           {/* Header Section */}
-          <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 px-1 sm:px-3">
+          <div className="flex flex-col lg:flex-row gap-5 sm:gap-8 lg:gap-10 px-1 sm:px-3">
             <div className="flex flex-col gap-4 sm:gap-5 w-full lg:w-[30%] justify-between">
-              <div className="flex flex-col gap-2 sm:gap-3">
-                <h5 className="text-sm sm:text-base text-black/60 tracking-tight">Client Reviews</h5>
-                <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tighter text-black/90">What Our Homeowners Say About E&E</h4>
+              <div className="flex flex-col gap-1.5 sm:gap-3">
+                <h5 className="text-xs sm:text-base text-black/60 tracking-tight">Client Reviews</h5>
+                <h4 className="text-[1.4rem] leading-tight sm:text-3xl md:text-4xl font-semibold tracking-tighter text-black/90">What Our Homeowners Say About E&E</h4>
               </div>
 
               {/* Review Sources Summary */}
@@ -229,10 +229,10 @@ const Footer = ({ backgroundColor = '#0891b2' }: FooterProps) => {
               </div>
 
               {/* Navigation */}
-              <div className="flex flex-row gap-2 sm:gap-3 mt-4">
+              <div className="flex flex-row gap-2 sm:gap-3 mt-3 sm:mt-4">
                 <button
                   onClick={handlePrevious}
-                  className="w-10 h-10 sm:w-12 sm:h-12 bg-stone-200/40 rounded-full text-black flex items-center justify-center hover:bg-stone-300/50 transition-colors duration-200 cursor-pointer"
+                  className="w-11 h-11 sm:w-12 sm:h-12 bg-stone-200/40 rounded-full text-black flex items-center justify-center hover:bg-stone-300/50 active:bg-stone-300/70 transition-colors duration-200 cursor-pointer"
                   aria-label="Previous testimonial"
                 >
                   <svg width="18" height="18" className="sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -241,7 +241,7 @@ const Footer = ({ backgroundColor = '#0891b2' }: FooterProps) => {
                 </button>
                 <button
                   onClick={handleNext}
-                  className="w-10 h-10 sm:w-12 sm:h-12 bg-stone-200/40 rounded-full text-black flex items-center justify-center hover:bg-stone-300/50 transition-colors duration-200 cursor-pointer"
+                  className="w-11 h-11 sm:w-12 sm:h-12 bg-stone-200/40 rounded-full text-black flex items-center justify-center hover:bg-stone-300/50 active:bg-stone-300/70 transition-colors duration-200 cursor-pointer"
                   aria-label="Next testimonial"
                 >
                   <svg width="18" height="18" className="sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -261,8 +261,8 @@ const Footer = ({ backgroundColor = '#0891b2' }: FooterProps) => {
                           setCurrentIndex((prev) => (prev + 1) % testimonials.length);
                         }, 5000);
                       }}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        idx === currentIndex ? 'w-6 bg-black/60' : 'bg-black/20 hover:bg-black/30'
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        idx === currentIndex ? 'w-5 sm:w-6 bg-black/60' : 'w-2 bg-black/20 hover:bg-black/30'
                       }`}
                       aria-label={`Go to review ${idx + 1}`}
                     />
@@ -285,7 +285,7 @@ const Footer = ({ backgroundColor = '#0891b2' }: FooterProps) => {
                   return (
                     <div
                       key={`${testimonial.id}-${index}`}
-                      className="rounded-2xl sm:rounded-3xl bg-stone-200/40 p-5 sm:p-6 md:p-7 flex flex-col gap-4 sm:gap-5 justify-between min-w-[300px] w-[300px] sm:min-w-[360px] sm:w-[360px] md:min-w-[420px] md:w-[420px] min-h-[280px] sm:min-h-[300px] md:min-h-[320px] transition-all duration-300"
+                      className="rounded-2xl sm:rounded-3xl bg-stone-200/40 p-4 sm:p-6 md:p-7 flex flex-col gap-3 sm:gap-5 justify-between min-w-[280px] w-[280px] sm:min-w-[360px] sm:w-[360px] md:min-w-[420px] md:w-[420px] min-h-[260px] sm:min-h-[300px] md:min-h-[320px] transition-all duration-300"
                     >
                       {/* Source Badge & Rating */}
                       <div className="flex items-center justify-between">
@@ -308,21 +308,21 @@ const Footer = ({ backgroundColor = '#0891b2' }: FooterProps) => {
                       </div>
 
                       {/* Review Text */}
-                      <p className="text-sm sm:text-base md:text-lg leading-relaxed text-black/80 tracking-tight flex-1">
+                      <p className="text-[0.85rem] leading-relaxed sm:text-base md:text-lg text-black/80 tracking-tight flex-1">
                         &ldquo;{testimonial.body}&rdquo;
                       </p>
 
                       {/* Reviewer Info */}
                       <div className="flex items-center gap-3 sm:gap-4 pt-3 border-t border-black/10">
                         <div
-                          className="w-10 h-10 sm:w-11 sm:h-11 rounded-full text-white flex items-center justify-center flex-shrink-0 font-semibold text-base sm:text-lg"
+                          className="w-9 h-9 sm:w-11 sm:h-11 rounded-full text-white flex items-center justify-center flex-shrink-0 font-semibold text-sm sm:text-lg"
                           style={{ backgroundColor: '#0891b2' }}
                         >
                           {testimonial.clientName.charAt(0)}
                         </div>
                         <div className="flex flex-col">
-                          <h5 className="text-base sm:text-lg font-medium text-black/90 tracking-tight">{testimonial.clientName}</h5>
-                          <p className="text-xs sm:text-sm text-black/50 tracking-tight">{testimonial.clientCompany}</p>
+                          <h5 className="text-[0.9rem] sm:text-lg font-medium text-black/90 tracking-tight">{testimonial.clientName}</h5>
+                          <p className="text-[0.7rem] sm:text-sm text-black/50 tracking-tight">{testimonial.clientCompany}</p>
                         </div>
                       </div>
                     </div>
@@ -331,19 +331,19 @@ const Footer = ({ backgroundColor = '#0891b2' }: FooterProps) => {
               </div>
 
               {/* Fade edges */}
-              <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-white to-transparent pointer-events-none hidden lg:block" />
-              <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-white to-transparent pointer-events-none" />
+              <div className="absolute top-0 left-0 w-6 sm:w-8 h-full bg-gradient-to-r from-white to-transparent pointer-events-none hidden lg:block" />
+              <div className="absolute top-0 right-0 w-10 sm:w-16 h-full bg-gradient-to-l from-white to-transparent pointer-events-none" />
             </div>
           </div>
 
           {/* Overall Rating Bar */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 py-4 sm:py-6 px-4 sm:px-8 bg-stone-100 rounded-xl sm:rounded-2xl mx-1 sm:mx-3">
-            <div className="flex items-center gap-3">
-              <span className="text-3xl sm:text-4xl font-bold text-black tracking-tighter">5.0</span>
-              <StarRating rating={5} size="w-5 h-5 sm:w-6 sm:h-6" />
+          <div className="flex flex-col gap-3 sm:flex-row items-center justify-center sm:gap-8 py-4 sm:py-6 px-4 sm:px-8 bg-stone-100 rounded-xl sm:rounded-2xl mx-0 sm:mx-3">
+            <div className="flex items-center gap-2 sm:gap-3">
+              <span className="text-[1.75rem] sm:text-4xl font-bold text-black tracking-tighter">5.0</span>
+              <StarRating rating={5} size="w-4 h-4 sm:w-6 sm:h-6" />
             </div>
-            <div className="h-px sm:h-8 w-full sm:w-px bg-black/10" />
-            <p className="text-sm sm:text-base text-black/60 text-center sm:text-left">
+            <div className="h-px w-full max-w-[100px] sm:h-8 sm:w-px bg-black/10" />
+            <p className="text-[0.8rem] sm:text-base text-black/60 text-center sm:text-left">
               Based on <span className="font-semibold text-black/80">verified reviews</span> from Yelp, Google & Houzz
             </p>
           </div>
@@ -351,83 +351,83 @@ const Footer = ({ backgroundColor = '#0891b2' }: FooterProps) => {
       </div>
 
       {/* Footer Section */}
-      <div className="p-3 sm:p-5">
-        <div className="tracking-tighter text-white px-4 sm:px-8 md:px-12 lg:px-16 pt-8 sm:pt-12 md:pt-16 pb-4 rounded-2xl sm:rounded-3xl flex flex-col gap-6 sm:gap-8 md:gap-10" style={{ backgroundColor }}>
+      <div className="p-4 sm:p-5 pb-[env(safe-area-inset-bottom)]">
+        <div className="tracking-tighter text-white px-5 sm:px-8 md:px-12 lg:px-16 pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-4 rounded-2xl sm:rounded-3xl flex flex-col gap-6 sm:gap-8 md:gap-10" style={{ backgroundColor }}>
           <div className="w-full flex flex-col xl:flex-row gap-6 sm:gap-8 xl:gap-8">
-            <div className="flex flex-col gap-4 sm:gap-5 w-full xl:w-[28%] flex-shrink-0">
+            <div className="flex flex-col gap-3 sm:gap-5 w-full xl:w-[28%] flex-shrink-0">
               <Image
                 src="/ee-logo-large.png"
                 alt="E&E Home Remodeling"
                 width={300}
                 height={200}
-                className="w-full max-w-[140px] sm:max-w-[160px] md:max-w-[180px] h-auto brightness-0 invert"
+                className="w-full max-w-[120px] sm:max-w-[160px] md:max-w-[180px] h-auto brightness-0 invert"
               />
-              <p className="text-white/80 text-sm sm:text-base leading-relaxed">
+              <p className="text-white/80 text-[0.85rem] sm:text-base leading-relaxed">
                 Family-owned remodeling with 25+ years of expert craftsmanship in Ventura, Santa Barbara & Los Angeles Counties.
               </p>
             </div>
 
             {/* Navigation Links Grid */}
-            <div className="w-full xl:flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 xl:gap-6">
-              <div className="flex flex-col gap-2 sm:gap-3">
-                <h5 className="text-xl sm:text-2xl text-white">
+            <div className="w-full xl:flex-1 grid grid-cols-2 gap-y-5 gap-x-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-5 xl:gap-6">
+              <div className="flex flex-col gap-1.5 sm:gap-3">
+                <h5 className="text-base sm:text-2xl text-white font-medium">
                   Services
                 </h5>
-                <ul className="text-base sm:text-lg md:text-xl text-white font-normal">
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/services/kitchen-remodeling')}>Kitchen Remodeling</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/services/bathroom-remodeling')}>Bathroom Remodeling</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/services/adu-garage-conversion')}>ADU & Garage</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/services/outdoor-living')}>Outdoor Living</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/services/whole-house-remodeling')}>Whole House</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/services/room-additions')}>Room Additions</li>
+                <ul className="text-[0.85rem] sm:text-lg md:text-xl text-white font-normal space-y-0.5 sm:space-y-0">
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/services/kitchen-remodeling')}>Kitchen Remodeling</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/services/bathroom-remodeling')}>Bathroom Remodeling</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/services/adu-garage-conversion')}>ADU & Garage</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/services/outdoor-living')}>Outdoor Living</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/services/whole-house-remodeling')}>Whole House</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/services/room-additions')}>Room Additions</li>
                 </ul>
               </div>
-              <div className="flex flex-col gap-2 sm:gap-3">
-                <h5 className="text-xl sm:text-2xl text-white">
+              <div className="flex flex-col gap-1.5 sm:gap-3">
+                <h5 className="text-base sm:text-2xl text-white font-medium">
                   Locations
                 </h5>
-                <ul className="text-base sm:text-lg md:text-xl text-white font-normal">
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/locations/ventura-county')}>Ventura County</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/locations/santa-barbara-county')}>Santa Barbara</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/locations/los-angeles-county')}>Los Angeles</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/locations/calabasas')}>Calabasas</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/locations/thousand-oaks')}>Thousand Oaks</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/locations/woodland-hills')}>Woodland Hills</li>
+                <ul className="text-[0.85rem] sm:text-lg md:text-xl text-white font-normal space-y-0.5 sm:space-y-0">
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/locations/ventura-county')}>Ventura County</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/locations/santa-barbara-county')}>Santa Barbara</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/locations/los-angeles-county')}>Los Angeles</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/locations/calabasas')}>Calabasas</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/locations/thousand-oaks')}>Thousand Oaks</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/locations/woodland-hills')}>Woodland Hills</li>
                 </ul>
               </div>
-              <div className="flex flex-col gap-2 sm:gap-3">
-                <h5 className="text-xl sm:text-2xl text-white">
+              <div className="flex flex-col gap-1.5 sm:gap-3">
+                <h5 className="text-base sm:text-2xl text-white font-medium">
                   Company
                 </h5>
-                <ul className="text-base sm:text-lg md:text-xl text-white font-normal">
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/about/our-story')}>About Us</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/about/our-process')}>Our Process</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/projects')}>Projects</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/about/meet-ezra-and-ester')}>Meet the Owners</li>
+                <ul className="text-[0.85rem] sm:text-lg md:text-xl text-white font-normal space-y-0.5 sm:space-y-0">
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/about/our-story')}>About Us</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/about/our-process')}>Our Process</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/projects')}>Projects</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/about/meet-ezra-and-ester')}>Meet the Owners</li>
                 </ul>
               </div>
-              <div className="flex flex-col gap-2 sm:gap-3">
-                <h5 className="text-xl sm:text-2xl text-white">
+              <div className="flex flex-col gap-1.5 sm:gap-3">
+                <h5 className="text-base sm:text-2xl text-white font-medium">
                   Quick Links
                 </h5>
-                <ul className="text-base sm:text-lg md:text-xl text-white font-normal">
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/services')}>All Services</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/locations')}>Service Areas</li>
-                  <li className="cursor-pointer hover:text-white/80 transition-colors" onClick={() => router.push('/contact')}>Get a Quote</li>
+                <ul className="text-[0.85rem] sm:text-lg md:text-xl text-white font-normal space-y-0.5 sm:space-y-0">
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/services')}>All Services</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/locations')}>Service Areas</li>
+                  <li className="cursor-pointer hover:text-white/80 active:text-white/60 transition-colors py-0.5" onClick={() => router.push('/contact')}>Get a Quote</li>
                 </ul>
               </div>
-              <div className="flex flex-col gap-2 sm:gap-3">
-                <h5 className="text-xl sm:text-2xl text-white">
+              <div className="flex flex-col gap-1.5 sm:gap-3 col-span-2 sm:col-span-1">
+                <h5 className="text-base sm:text-2xl text-white font-medium">
                   Get In Touch
                 </h5>
-                <div className="flex flex-col gap-3 sm:gap-4">
-                  <a href="tel:8776389429" className="flex items-center gap-2 sm:gap-3 group cursor-pointer">
-                    <Phone className="!text-white group-hover:!text-black transition-colors duration-150 flex-shrink-0" size={18} />
-                    <span className="text-base sm:text-lg md:text-xl font-normal !text-white group-hover:!text-black transition-colors duration-150 whitespace-nowrap">(877) 638-9429</span>
+                <div className="flex flex-col gap-2 sm:gap-4">
+                  <a href="tel:8776389429" className="flex items-center gap-2 sm:gap-3 group cursor-pointer py-1 active:opacity-70">
+                    <Phone className="!text-white group-hover:!text-black transition-colors duration-150 flex-shrink-0" size={16} />
+                    <span className="text-[0.9rem] sm:text-lg md:text-xl font-normal !text-white group-hover:!text-black transition-colors duration-150 whitespace-nowrap">(877) 638-9429</span>
                   </a>
-                  <a href="mailto:info@eandehomeremodel.com" className="flex items-center gap-2 sm:gap-3 group cursor-pointer">
-                    <Mail className="!text-white group-hover:!text-black transition-colors duration-150 flex-shrink-0" size={18} />
-                    <span className="text-base sm:text-lg font-normal !text-white group-hover:!text-black transition-colors duration-150 break-all">info@eandehomeremodel.com</span>
+                  <a href="mailto:info@eandehomeremodel.com" className="flex items-center gap-2 sm:gap-3 group cursor-pointer py-1 active:opacity-70">
+                    <Mail className="!text-white group-hover:!text-black transition-colors duration-150 flex-shrink-0" size={16} />
+                    <span className="text-[0.8rem] sm:text-lg font-normal !text-white group-hover:!text-black transition-colors duration-150 break-all">info@eandehomeremodel.com</span>
                   </a>
                 </div>
               </div>
@@ -435,42 +435,42 @@ const Footer = ({ backgroundColor = '#0891b2' }: FooterProps) => {
           </div>
 
           {/* Office Locations */}
-          <div className="pt-6 mt-2 border-t border-white/20">
-            <h5 className="text-lg sm:text-xl text-white mb-4">Offices</h5>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm sm:text-base text-white/80">
+          <div className="pt-5 sm:pt-6 mt-2 border-t border-white/20">
+            <h5 className="text-base sm:text-xl text-white mb-3 sm:mb-4">Offices</h5>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4 text-[0.8rem] sm:text-base text-white/80">
               <div className="flex gap-2">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-medium text-white">San Fernando Valley</p>
-                  <p>18340 Ventura Blvd, Tarzana, CA 91356</p>
+                  <p className="font-medium text-white text-[0.85rem] sm:text-base">San Fernando Valley</p>
+                  <p className="leading-snug">18340 Ventura Blvd, Tarzana, CA 91356</p>
                   <p className="text-white/60">(818) 200-1334</p>
                 </div>
               </div>
               <div className="flex gap-2">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-medium text-white">Ventura</p>
-                  <p>300 E Esplanade Dr, 9th Floor, Oxnard, CA 93036</p>
+                  <p className="font-medium text-white text-[0.85rem] sm:text-base">Ventura</p>
+                  <p className="leading-snug">300 E Esplanade Dr, 9th Floor, Oxnard, CA 93036</p>
                   <p className="text-white/60">(805) 590-0908</p>
                 </div>
               </div>
               <div className="flex gap-2">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-medium text-white">Santa Barbara</p>
-                  <p>7 W Figueroa St, Ste 217, Santa Barbara, CA 93101</p>
+                  <p className="font-medium text-white text-[0.85rem] sm:text-base">Santa Barbara</p>
+                  <p className="leading-snug">7 W Figueroa St, Ste 217, Santa Barbara, CA 93101</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0 pt-6 mt-2 border-t border-white/20">
-            <span className="text-white/80 text-xs sm:text-sm">© 2025 E&E Home Remodeling. All Rights Reserved.</span>
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-white/80 text-xs sm:text-sm">
+          <div className="flex flex-col gap-3 sm:flex-row justify-between items-center sm:gap-0 pt-5 sm:pt-6 mt-2 border-t border-white/20">
+            <span className="text-white/80 text-[0.7rem] sm:text-sm">© 2025 E&E Home Remodeling. All Rights Reserved.</span>
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-white/80 text-[0.7rem] sm:text-sm">
               <span>CA License #1087571</span>
               <span className="text-white/60">|</span>
-              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/privacy" className="hover:text-white active:text-white/60 transition-colors py-1">Privacy Policy</a>
               <span className="text-white/60">|</span>
-              <a href="/terms" className="hover:text-white transition-colors">Terms</a>
+              <a href="/terms" className="hover:text-white active:text-white/60 transition-colors py-1">Terms</a>
             </div>
           </div>
         </div>

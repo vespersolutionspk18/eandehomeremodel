@@ -52,7 +52,7 @@ const AboutPage = () => {
         {/* Hero Section */}
         <section className="p-4 sm:p-5 lg:p-10">
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 justify-between mb-8 lg:mb-12">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black/95 tracking-tighter lg:w-[45%]">
+            <h1 className="text-[2rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl text-black/95 tracking-tighter lg:w-[45%]">
               Family-Owned. Quality-Driven. Trusted for 25+ Years.
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl tracking-tighter leading-relaxed text-black/80 lg:w-[50%]">
@@ -84,8 +84,8 @@ const AboutPage = () => {
         <section className="p-4 sm:p-5 lg:p-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {stats.map((stat, index) => (
-              <div key={index} className="p-4 sm:p-8 border-l-2 border-l-[#0891b2] flex flex-col gap-1">
-                <h5 className="text-5xl sm:text-6xl md:text-7xl text-black font-medium">{stat.value}</h5>
+              <div key={index} className="p-3 sm:p-8 border-l-2 border-l-[#0891b2] flex flex-col gap-1">
+                <h5 className="text-4xl sm:text-6xl md:text-7xl text-black font-medium">{stat.value}</h5>
                 <p className="text-base sm:text-lg md:text-xl text-black/90 tracking-tighter">
                   {stat.label}
                 </p>
@@ -134,7 +134,7 @@ const AboutPage = () => {
               <Link
                 key={index}
                 href={link.href}
-                className="group p-6 sm:p-8 rounded-2xl border border-stone-200 hover:border-[#0891b2] hover:shadow-lg transition-all duration-300"
+                className="group p-5 sm:p-8 rounded-2xl border border-stone-200 hover:border-[#0891b2] hover:shadow-lg active:scale-[0.98] transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 rounded-xl bg-stone-100 group-hover:bg-[#0891b2]/10 flex items-center justify-center transition-colors">
@@ -165,13 +165,13 @@ const AboutPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#0891b2] rounded-full font-medium text-lg hover:bg-white/90 transition-colors"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-[#0891b2] rounded-full font-medium text-base sm:text-lg hover:bg-white/90 active:bg-white/80 active:scale-[0.98] transition-all min-h-[48px]"
               >
                 Schedule Free Consultation
               </Link>
               <Link
                 href="tel:8776389429"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-full font-medium text-lg hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 border-2 border-white text-white rounded-full font-medium text-base sm:text-lg hover:bg-white/10 active:bg-white/20 active:scale-[0.98] transition-all min-h-[48px]"
               >
                 Call (877) 638-9429
               </Link>

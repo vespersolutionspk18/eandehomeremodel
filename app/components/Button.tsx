@@ -54,9 +54,9 @@ const Button: React.FC<ButtonProps> = ({
   }
 
   const sizes = {
-    sm: 'px-4 py-1.5 text-base',
-    md: 'px-5 py-2 text-lg',
-    lg: 'px-8 py-3.5 text-xl'
+    sm: 'px-4 py-2 text-base min-h-[40px]',
+    md: 'px-5 py-2.5 text-base sm:text-lg min-h-[44px]',
+    lg: 'px-6 sm:px-8 py-3 sm:py-3.5 text-lg sm:text-xl min-h-[48px]'
   }
 
   const textVariants = {

@@ -112,32 +112,32 @@ export default function ProjectsPage() {
         <section className="p-4 sm:p-5 lg:p-10">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 justify-between mb-12">
             <div className="lg:w-[60%]">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black/95 tracking-tighter mb-6">
+              <h1 className="text-[2rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl text-black/95 tracking-tighter mb-5 sm:mb-6">
                 Our Projects
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl tracking-tighter leading-relaxed text-black/70">
+              <p className="text-base sm:text-xl md:text-2xl tracking-tighter leading-relaxed text-black/70">
                 Explore {projects.length}+ stunning transformations across Southern California.
                 Every project showcases our commitment to quality craftsmanship and attention to detail.
               </p>
             </div>
             <div className="lg:w-[35%] flex flex-col gap-4">
-              <div className="bg-stone-50 rounded-2xl p-6">
-                <div className="grid grid-cols-2 gap-6">
+              <div className="bg-stone-50 rounded-2xl p-4 sm:p-6">
+                <div className="grid grid-cols-2 gap-4 sm:gap-6">
                   <div>
-                    <p className="text-4xl font-medium text-[#0891b2] tracking-tighter">{projects.length}+</p>
-                    <p className="text-base text-black/60 tracking-tight">Completed Projects</p>
+                    <p className="text-3xl sm:text-4xl font-medium text-[#0891b2] tracking-tighter">{projects.length}+</p>
+                    <p className="text-sm sm:text-base text-black/60 tracking-tight">Completed Projects</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-medium text-[#0891b2] tracking-tighter">25+</p>
-                    <p className="text-base text-black/60 tracking-tight">Years Experience</p>
+                    <p className="text-3xl sm:text-4xl font-medium text-[#0891b2] tracking-tighter">25+</p>
+                    <p className="text-sm sm:text-base text-black/60 tracking-tight">Years Experience</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-medium text-[#0891b2] tracking-tighter">3</p>
-                    <p className="text-base text-black/60 tracking-tight">Counties Served</p>
+                    <p className="text-3xl sm:text-4xl font-medium text-[#0891b2] tracking-tighter">3</p>
+                    <p className="text-sm sm:text-base text-black/60 tracking-tight">Counties Served</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-medium text-[#0891b2] tracking-tighter">100%</p>
-                    <p className="text-base text-black/60 tracking-tight">Satisfaction</p>
+                    <p className="text-3xl sm:text-4xl font-medium text-[#0891b2] tracking-tighter">100%</p>
+                    <p className="text-sm sm:text-base text-black/60 tracking-tight">Satisfaction</p>
                   </div>
                 </div>
               </div>
@@ -149,8 +149,8 @@ export default function ProjectsPage() {
             <div className="flex flex-wrap items-center gap-3">
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border transition-colors ${
-                  showFilters ? 'bg-[#0891b2] text-white border-[#0891b2]' : 'border-stone-300 text-black/70 hover:border-[#0891b2]'
+                className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-full border transition-colors min-h-[44px] ${
+                  showFilters ? 'bg-[#0891b2] text-white border-[#0891b2]' : 'border-stone-300 text-black/70 hover:border-[#0891b2] active:bg-stone-100'
                 }`}
               >
                 <Filter className="w-4 h-4" />
@@ -220,10 +220,10 @@ export default function ProjectsPage() {
                     <button
                       key={category}
                       onClick={() => setSelectedCategory(selectedCategory === category ? null : category)}
-                      className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                      className={`px-4 py-2.5 rounded-full text-sm font-medium transition-colors min-h-[40px] ${
                         selectedCategory === category
                           ? 'bg-[#0891b2] text-white'
-                          : 'bg-white border border-stone-200 text-black/70 hover:border-[#0891b2]'
+                          : 'bg-white border border-stone-200 text-black/70 hover:border-[#0891b2] active:bg-stone-100'
                       }`}
                     >
                       {categoryLabels[category] || category}
@@ -238,10 +238,10 @@ export default function ProjectsPage() {
                     <button
                       key={location}
                       onClick={() => setSelectedLocation(selectedLocation === location ? null : location)}
-                      className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                      className={`px-4 py-2.5 rounded-full text-sm font-medium transition-colors min-h-[40px] ${
                         selectedLocation === location
                           ? 'bg-[#0891b2] text-white'
-                          : 'bg-white border border-stone-200 text-black/70 hover:border-[#0891b2]'
+                          : 'bg-white border border-stone-200 text-black/70 hover:border-[#0891b2] active:bg-stone-100'
                       }`}
                     >
                       {location}
@@ -254,7 +254,7 @@ export default function ProjectsPage() {
 
           {/* Projects Grid */}
           {viewMode === 'grid' ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {filteredProjects.map((project, index) => (
                 <Link
                   key={project.slug}
@@ -344,45 +344,45 @@ export default function ProjectsPage() {
 
         {/* CTA Section */}
         <section className="p-3 sm:p-5 my-8 lg:my-16">
-          <div className="bg-[#0891b2] rounded-2xl sm:rounded-3xl py-16 md:py-24 px-6 md:px-10 lg:px-16">
+          <div className="bg-[#0891b2] rounded-2xl sm:rounded-3xl py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-10 lg:px-16">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
+              <h2 className="text-[1.75rem] leading-tight sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 sm:mb-6 tracking-tight">
                 Your Home Could Be Next
               </h2>
-              <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-10 leading-relaxed">
                 Get your FREE 3D design and see your dream space before we build it. No obligation, no pressure - just expert guidance from a family-owned business with 25+ years of experience.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#0891b2] rounded-full font-semibold text-lg hover:bg-white/90 transition-colors"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-[#0891b2] rounded-full font-semibold text-base sm:text-lg hover:bg-white/90 active:bg-white/80 active:scale-[0.98] transition-all min-h-[48px]"
                 >
                   Start Your Transformation
                 </Link>
                 <Link
                   href="tel:8776389429"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-full font-semibold text-lg hover:bg-white/10 transition-colors"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 border-2 border-white text-white rounded-full font-semibold text-base sm:text-lg hover:bg-white/10 active:bg-white/20 active:scale-[0.98] transition-all min-h-[48px]"
                 >
                   Call (877) 638-9429
                 </Link>
               </div>
 
               {/* Trust Signals */}
-              <div className="flex flex-wrap items-center justify-center gap-6 mt-10 pt-10 border-t border-white/20">
-                <div className="flex items-center gap-2 text-white/80">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-8 sm:mt-10 pt-8 sm:pt-10 border-t border-white/20">
+                <div className="flex items-center gap-2 text-white/80 text-sm sm:text-base">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>25+ Years Experience</span>
+                  <span>25+ Years</span>
                 </div>
-                <div className="flex items-center gap-2 text-white/80">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center gap-2 text-white/80 text-sm sm:text-base">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>Family Owned</span>
                 </div>
-                <div className="flex items-center gap-2 text-white/80">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <div className="flex items-center gap-2 text-white/80 text-sm sm:text-base">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <span>CA Lic #1087571</span>

@@ -111,7 +111,7 @@ const OurProcessPage = () => {
         {/* Hero Section */}
         <section className="p-4 sm:p-5 lg:p-10">
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-16 justify-between mb-8 lg:mb-12">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black/95 tracking-tighter lg:w-[45%]">
+            <h1 className="text-[2rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl text-black/95 tracking-tighter lg:w-[45%]">
               Our Process
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl tracking-tighter leading-relaxed text-black/80 lg:w-[50%]">
@@ -132,8 +132,8 @@ const OurProcessPage = () => {
               >
                 {/* Content Side */}
                 <div className="lg:w-1/2">
-                  <div className={`${step.color} rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 h-full`}>
-                    <span className="text-6xl sm:text-7xl font-bold text-black/10 block mb-4">
+                  <div className={`${step.color} rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 h-full`}>
+                    <span className="text-5xl sm:text-7xl font-bold text-black/10 block mb-4">
                       {step.number}
                     </span>
                     <div className="flex items-center gap-4 mb-4">
@@ -211,13 +211,13 @@ const OurProcessPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#0891b2] rounded-full font-medium text-lg hover:bg-white/90 transition-colors"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-[#0891b2] rounded-full font-medium text-base sm:text-lg hover:bg-white/90 active:bg-white/80 active:scale-[0.98] transition-all min-h-[48px]"
               >
                 Schedule Free Consultation
               </Link>
               <Link
                 href="tel:8776389429"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-full font-medium text-lg hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 border-2 border-white text-white rounded-full font-medium text-base sm:text-lg hover:bg-white/10 active:bg-white/20 active:scale-[0.98] transition-all min-h-[48px]"
               >
                 Call (877) 638-9429
               </Link>
@@ -238,7 +238,7 @@ const OurProcessPage = () => {
             </div>
             <Link
               href="/about/credentials"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#0891b2] text-white rounded-full font-medium text-lg hover:bg-[#0891b2]/90 transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#0891b2] text-white rounded-full font-medium text-base sm:text-lg hover:bg-[#0891b2]/90 active:bg-[#0891b2]/80 active:scale-[0.98] transition-all whitespace-nowrap min-h-[48px]"
             >
               Our Credentials
               <ArrowRight className="w-5 h-5" />

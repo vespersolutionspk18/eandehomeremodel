@@ -51,36 +51,36 @@ const Form = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-0">
       {/* Left Section - Contact Info */}
-      <div className="relative w-full lg:w-[45%] p-6 md:p-8 flex flex-col justify-between rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none overflow-hidden min-h-[400px] lg:min-h-0 bg-cyan-700">
+      <div className="relative w-full lg:w-[45%] p-5 sm:p-6 md:p-8 flex flex-col justify-between rounded-t-2xl sm:rounded-t-3xl lg:rounded-l-3xl lg:rounded-tr-none overflow-hidden min-h-[380px] sm:min-h-[400px] lg:min-h-0 bg-cyan-700">
         <div className="relative z-10 flex flex-col h-full justify-between">
           <div>
-            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl tracking-tighter font-bold mb-4">
+            <h1 className="text-white text-[1.75rem] leading-tight sm:text-4xl lg:text-5xl tracking-tighter font-bold mb-3 sm:mb-4">
               Let&apos;s Start Your<br />
               Dream Project
             </h1>
-            <p className="text-white/80 text-base md:text-lg mb-8 max-w-md">
+            <p className="text-white/80 text-[0.9rem] sm:text-base md:text-lg mb-6 sm:mb-8 max-w-md leading-relaxed">
               Fill out the form and we&apos;ll get back to you within 24 hours. Or give us a call — we love hearing from homeowners!
             </p>
 
             {/* Quick Contact */}
-            <div className="flex flex-col gap-4 mb-8">
-              <a href="tel:+18776389429" className="flex items-center gap-3 text-white hover:text-white/80 transition-colors group">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+            <div className="flex flex-col gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <a href="tel:+18776389429" className="flex items-center gap-3 text-white hover:text-white/80 active:text-white/60 transition-colors group py-1">
+                <div className="w-11 h-11 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors flex-shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span className="text-lg font-medium">(877) 638-9429</span>
+                <span className="text-base sm:text-lg font-medium">(877) 638-9429</span>
               </a>
-              <a href="mailto:info@eandehomeremodel.com" className="flex items-center gap-3 text-white hover:text-white/80 transition-colors group">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+              <a href="mailto:info@eandehomeremodel.com" className="flex items-center gap-3 text-white hover:text-white/80 active:text-white/60 transition-colors group py-1">
+                <div className="w-11 h-11 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors flex-shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="text-lg">info@eandehomeremodel.com</span>
+                <span className="text-[0.9rem] sm:text-lg break-all">info@eandehomeremodel.com</span>
               </a>
-              <div className="flex items-center gap-3 text-white/80">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+              <div className="flex items-center gap-3 text-white/80 py-1">
+                <div className="w-11 h-11 sm:w-10 sm:h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
                   <Clock className="w-5 h-5" />
                 </div>
-                <span>Mon-Fri: 8am - 6pm | Sat: 9am - 3pm</span>
+                <span className="text-[0.85rem] sm:text-base">Mon-Fri: 8am - 6pm | Sat: 9am - 3pm</span>
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@ const Form = () => {
                 value={formData.firstName}
                 onChange={handleChange}
                 placeholder="John"
-                className="w-full px-3 py-2.5 md:py-2 text-sm md:text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all placeholder:text-black/30"
+                className="w-full px-3 py-3 sm:py-2.5 text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all placeholder:text-black/30 min-h-[48px] sm:min-h-0"
                 required
               />
             </div>
@@ -140,7 +140,7 @@ const Form = () => {
                 value={formData.lastName}
                 onChange={handleChange}
                 placeholder="Smith"
-                className="w-full px-3 py-2.5 md:py-2 text-sm md:text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all placeholder:text-black/30"
+                className="w-full px-3 py-3 sm:py-2.5 text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all placeholder:text-black/30 min-h-[48px] sm:min-h-0"
                 required
               />
             </div>
@@ -158,7 +158,7 @@ const Form = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="john@example.com"
-                className="w-full px-3 py-2.5 md:py-2 text-sm md:text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all placeholder:text-black/30"
+                className="w-full px-3 py-3 sm:py-2.5 text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all placeholder:text-black/30 min-h-[48px] sm:min-h-0"
                 required
               />
             </div>
@@ -172,7 +172,7 @@ const Form = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="(555) 123-4567"
-                className="w-full px-3 py-2.5 md:py-2 text-sm md:text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all placeholder:text-black/30"
+                className="w-full px-3 py-3 sm:py-2.5 text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all placeholder:text-black/30 min-h-[48px] sm:min-h-0"
                 required
               />
             </div>
@@ -190,7 +190,7 @@ const Form = () => {
                 value={formData.address}
                 onChange={handleChange}
                 placeholder="123 Main Street"
-                className="w-full px-3 py-2.5 md:py-2 text-sm md:text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all placeholder:text-black/30"
+                className="w-full px-3 py-3 sm:py-2.5 text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all placeholder:text-black/30 min-h-[48px] sm:min-h-0"
               />
             </div>
             <div>
@@ -201,7 +201,7 @@ const Form = () => {
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
-                className="w-full px-3 py-2.5 md:py-2 text-sm md:text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all appearance-none bg-white cursor-pointer"
+                className="w-full px-3 py-3 sm:py-2.5 text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all appearance-none bg-white cursor-pointer min-h-[48px] sm:min-h-0"
                 required
               >
                 <option value="">Select city</option>
@@ -240,7 +240,7 @@ const Form = () => {
               name="projectType"
               value={formData.projectType}
               onChange={handleChange}
-              className="w-full px-3 py-2.5 md:py-2 text-sm md:text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all appearance-none bg-white cursor-pointer"
+              className="w-full px-3 py-3 sm:py-2.5 text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all appearance-none bg-white cursor-pointer min-h-[48px] sm:min-h-0"
               required
             >
               <option value="">Select project type</option>
@@ -265,7 +265,7 @@ const Form = () => {
                 name="timeline"
                 value={formData.timeline}
                 onChange={handleChange}
-                className="w-full px-3 py-2.5 md:py-2 text-sm md:text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all appearance-none bg-white cursor-pointer"
+                className="w-full px-3 py-3 sm:py-2.5 text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all appearance-none bg-white cursor-pointer min-h-[48px] sm:min-h-0"
               >
                 <option value="">Select timeline</option>
                 <option value="asap">As soon as possible</option>
@@ -283,7 +283,7 @@ const Form = () => {
                 name="budget"
                 value={formData.budget}
                 onChange={handleChange}
-                className="w-full px-3 py-2.5 md:py-2 text-sm md:text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all appearance-none bg-white cursor-pointer"
+                className="w-full px-3 py-3 sm:py-2.5 text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all appearance-none bg-white cursor-pointer min-h-[48px] sm:min-h-0"
               >
                 <option value="">Select budget range</option>
                 <option value="under-25k">Under $25,000</option>
@@ -307,7 +307,7 @@ const Form = () => {
               onChange={handleChange}
               placeholder="Describe your project, goals, and any specific requirements..."
               rows={4}
-              className="w-full px-3 py-2.5 md:py-2 text-sm md:text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all placeholder:text-black/30 resize-none"
+              className="w-full px-3 py-3 sm:py-2.5 text-base border border-black/10 rounded-xl focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/10 transition-all placeholder:text-black/30 resize-none"
             />
           </div>
 
@@ -322,7 +322,7 @@ const Form = () => {
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full bg-cyan-600 text-white py-3 md:py-3.5 px-6 rounded-full text-sm md:text-base font-semibold hover:bg-cyan-700 transition-all flex items-center justify-center gap-2 group"
+              className="w-full bg-cyan-600 text-white py-3.5 sm:py-3 px-6 rounded-full text-base font-semibold hover:bg-cyan-700 active:bg-cyan-800 active:scale-[0.98] transition-all flex items-center justify-center gap-2 group min-h-[52px] sm:min-h-[48px]"
             >
               Request Free Consultation
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

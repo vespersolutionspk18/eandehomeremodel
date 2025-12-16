@@ -61,18 +61,18 @@ const OurServices = () => {
   ];
 
   return (
-    <div className="py-16 px-10">
+    <div className="py-12 px-4 sm:py-16 sm:px-10">
       <div className="max-w-[1400px] lg:max-w-[1600px] xl:max-w-[1800px] 2xl:max-w-[2200px] mx-auto">
         {/* Main Heading */}
-        <h2 className="text-4xl font-bold text-gray-900 text-center mb-4 tracking-tight">
+        <h2 className="text-[1.75rem] leading-tight sm:text-4xl font-bold text-gray-900 text-center mb-3 sm:mb-4 tracking-tight">
           Our Remodeling Services
         </h2>
-        <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg text-gray-600 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-2 sm:px-0">
           From kitchens and bathrooms to complete home transformations, we bring your vision to life with expert craftsmanship
         </p>
 
         {/* Category Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4 xl:gap-5 2xl:gap-6">
+        <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 xl:gap-5 2xl:gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isHovered = hoveredCard === index;
@@ -81,12 +81,12 @@ const OurServices = () => {
               <Link
                 key={index}
                 href={service.href}
-                className="flex flex-col items-start p-5 bg-stone-200/65 rounded-3xl transition-all duration-300 group"
+                className="flex flex-col items-start p-4 sm:p-5 bg-stone-200/65 rounded-2xl sm:rounded-3xl transition-all duration-300 group active:scale-[0.98]"
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 {/* Inset Image with rounded corners */}
-                <div className="relative w-full h-44 lg:h-48 xl:h-52 2xl:h-60 rounded-xl overflow-hidden mb-3">
+                <div className="relative w-full h-48 sm:h-44 lg:h-48 xl:h-52 2xl:h-60 rounded-xl overflow-hidden mb-3">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -108,13 +108,13 @@ const OurServices = () => {
                 </div>
 
                 {/* Title and Description */}
-                <div className="flex flex-col text-left gap-2">
+                <div className="flex flex-col text-left gap-1.5 sm:gap-2">
                   <div className="flex items-center gap-2">
-                    <h3 className="text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold text-gray-900 group-hover:text-[#0891b2] transition-colors">
+                    <h3 className="text-[1.1rem] sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold text-gray-900 group-hover:text-[#0891b2] transition-colors">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-sm lg:text-base xl:text-lg 2xl:text-xl text-gray-600 leading-relaxed">
+                  <p className="text-[0.875rem] leading-relaxed sm:text-sm lg:text-base xl:text-lg 2xl:text-xl text-gray-600">
                     {service.description}
                   </p>
                 </div>
